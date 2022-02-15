@@ -66,6 +66,11 @@ body {
     }
 
   }
+
+  .nonPC {
+    margin: .5rem .1rem;
+    opacity: 0;
+  }
 }
 
 .selected {
@@ -125,4 +130,23 @@ body {
     box-shadow: .1rem .1rem 2rem rgba(211, 211, 211, 0.5)
   }
 
+}
+
+@media only screen and(max-width: 600px) {
+  body {
+    overflow: hidden;
+  }
+
+  .main {
+    padding: 2rem;
+
+    h1 {
+      font-size: 3rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      top: 0%;
+    }
+  }
 }
