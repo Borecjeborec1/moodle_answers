@@ -40,7 +40,6 @@ function pcSetup() {
       }
     }
   })
-  nonPC.style.diplay = "none"
 }
 window.onload = () => {
   if (navigator.userAgent.includes("x64") || navigator.userAgent.includes("x32")) return pcSetup()
@@ -63,5 +62,6 @@ setTimeout(() => {
   mainP.style.opacity = 1
   mainH.style.opacity = 1
   mainSpans.forEach(el => el.style.opacity = 1)
-  nonPC.style.opacity = 1
+  if (navigator.userAgent.includes("x64") || navigator.userAgent.includes("x32")) return
+  nonPC.style.display = "block"
 }, 2000)
