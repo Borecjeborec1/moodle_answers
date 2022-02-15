@@ -194,6 +194,7 @@ body {
   }
   .main {
     padding: 2rem;
+    height: 70%;
   }
   .main h1 {
     font-size: 3rem;
