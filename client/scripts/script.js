@@ -5,12 +5,12 @@ const mainSpans = document.querySelectorAll('.main>span');
 const nonPC = document.querySelector('.main>.nonPC');
 const inp = document.querySelector('#question');
 const findBtn = document.querySelector('#find');
-const mainPMobile = document.querySelector('.main>.mobi');
 
 
 
 
 function pcSetup() {
+  mainDiv.classList.add("animSolo")
   document.addEventListener("paste", (e) => {
     if (!e.clipboardData.getData('text/plain')) return
     if (!findData(e.clipboardData.getData('text/plain'))) return
@@ -40,10 +40,18 @@ function pcSetup() {
       }
     }
   })
+  setTimeout(() => {
+    mainP.style.opacity = 1
+    mainH.style.opacity = 1
+    mainSpans.forEach(el => el.style.opacity = 1)
+  }, 2000)
 }
 window.onload = () => {
   if (navigator.userAgent.includes("x64") || navigator.userAgent.includes("x32")) return pcSetup()
   mainP.style.display = "none"
+  mainH.style.opacity = 1
+  mainSpans.forEach(el => el.style.opacity = 1)
+  nonPC.style.display = "block"
   findBtn.addEventListener("click", () => {
     mainP.style.display = ""
     mainP.innerText = `
@@ -53,15 +61,7 @@ window.onload = () => {
   `
     mainP.style.textTransform = 'capitalize';
     mainDiv.classList.remove("selected")
-  }
-  )
-
+  })
 }
 
-setTimeout(() => {
-  mainP.style.opacity = 1
-  mainH.style.opacity = 1
-  mainSpans.forEach(el => el.style.opacity = 1)
-  if (navigator.userAgent.includes("x64") || navigator.userAgent.includes("x32")) return
-  nonPC.style.display = "block"
-}, 2000)
+

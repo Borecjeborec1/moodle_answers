@@ -26,7 +26,16 @@ body {
   background-repeat: no-repeat;
 }
 
+.animSolo {
+  -webkit-animation: anime 3s forwards;
+          animation: anime 3s forwards;
+}
+
 .main {
+  width: 80%;
+  height: 90%;
+  -webkit-box-shadow: 0.1rem 0.1rem 2rem rgba(211, 211, 211, 0.5);
+          box-shadow: 0.1rem 0.1rem 2rem rgba(211, 211, 211, 0.5);
   position: relative;
   top: 5%;
   left: 10%;
@@ -36,8 +45,6 @@ body {
   min-height: -webkit-fit-content;
   min-height: -moz-fit-content;
   min-height: fit-content;
-  -webkit-animation: anime 3s forwards;
-          animation: anime 3s forwards;
   -webkit-transition: .8s;
   transition: .8s;
   -webkit-backdrop-filter: blur(6px);
@@ -181,7 +188,7 @@ body {
   }
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 650px) {
   body {
     overflow: hidden;
   }
