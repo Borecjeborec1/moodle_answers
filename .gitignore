@@ -1,4 +1,4 @@
 node_modules/
 .env
 questions.json
-client/styles/*.css
+client/styles/*.css.map
