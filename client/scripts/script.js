@@ -2,9 +2,13 @@ const mainDiv = document.querySelector('.main');
 const mainP = document.querySelector('.main>p');
 const mainH = document.querySelector('.main>h1');
 const mainSpans = document.querySelectorAll('.main>span');
+const nonPC = document.querySelector('.nonPC');
+const inp = document.querySelector('#question');
+const findBtn = document.querySelector('#find');
 
 
 document.addEventListener("paste", (e) => {
+  submit()
   if (!e.clipboardData.getData('text/plain')) return
   if (!findData(e.clipboardData.getData('text/plain'))) return
   mainP.innerText = `
@@ -40,4 +44,21 @@ setTimeout(() => {
   mainSpans.forEach(el => el.style.opacity = 1)
 }, 2000)
 
-console.log(navigator.userAgent)
+window.onload = () => {
+  if (navigator.userAgent.includes("x64") || navigator.userAgent.includes("x32")) return nonPC.style.diplay = "none"
+  mainP.style.display = "none"
+  nonPC.style.diplay = ""
+  findBtn.addEventListener("click", () => {
+    mainP.style.display = ""
+    mainP.innerText = `
+    Question: ${findData(e.clipboardData.getData('text/plain')).question} 
+    
+    Answer: ${findData(e.clipboardData.getData('text/plain')).answer}
+  `
+    mainP.style.textTransform = 'capitalize';
+    mainDiv.classList.remove("selected")
+  }
+  )
+
+}
+
