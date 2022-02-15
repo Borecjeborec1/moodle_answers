@@ -52,8 +52,10 @@ window.onload = () => {
   mainH.style.opacity = 1
   mainSpans.forEach(el => el.style.opacity = 1)
   nonPC.style.display = "block"
-  findBtn.addEventListener("click", () => {
+  nonPC.addEventListener("submit", (e) => {
+    e.preventDefault()
     mainP.style.display = ""
+    mainP.style.opacity = "1"
     mainP.innerText = `
     Question: ${findData(inp.value).question} 
     
@@ -61,6 +63,7 @@ window.onload = () => {
   `
     mainP.style.textTransform = 'capitalize';
     mainDiv.classList.remove("selected")
+    inp.value = ""
   })
 }
 

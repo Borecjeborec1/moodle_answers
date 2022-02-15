@@ -189,12 +189,15 @@ body {
 }
 
 @media only screen and (max-width: 650px) {
+  html {
+    height: 100vh;
+    overflow: hidden;
+  }
   body {
     overflow: hidden;
   }
   .main {
     padding: 2rem;
-    height: 70%;
   }
   .main h1 {
     font-size: 3rem;
