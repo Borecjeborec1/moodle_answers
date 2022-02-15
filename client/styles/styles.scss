@@ -2,12 +2,17 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden
 }
 
+
 @import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap');
+
+
+html {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
 
 body {
   font-family: 'Akaya Telivigala', cursive;
