@@ -13,7 +13,16 @@ function pcSetup() {
   mainDiv.classList.add("animSolo")
   document.addEventListener("paste", (e) => {
     if (!e.clipboardData.getData('text/plain')) return
-    if (!findData(e.clipboardData.getData('text/plain'))) return
+    if (!findData(e.clipboardData.getData('text/plain'))) {
+      mainP.innerText = `
+    Question: ${e.clipboardData.getData('text/plain')}} 
+    
+    Answer: Could not find answer, consider pasting only part of the question. 
+    `
+      mainP.style.textTransform = 'capitalize';
+      mainDiv.classList.remove("selected")
+      return
+    }
     mainP.innerText = `
     Question: ${findData(e.clipboardData.getData('text/plain')).question} 
     
