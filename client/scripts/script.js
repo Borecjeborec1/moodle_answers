@@ -15,7 +15,7 @@ function pcSetup() {
     if (!e.clipboardData.getData('text/plain')) return
     if (!findData(e.clipboardData.getData('text/plain'))) {
       mainP.innerText = `
-    Question: ${e.clipboardData.getData('text/plain')}} 
+    Question: ${e.clipboardData.getData('text/plain')} 
     
     Answer: Could not find answer, consider pasting only part of the question. 
     `
