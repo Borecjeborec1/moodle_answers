@@ -21,7 +21,7 @@ nightmare
   .end(el => {
     let res = JSON.parse(fs.readFileSync('questions.json', "utf8"))
     for (let i = 0; i < el[0].length; i++) {
-      res.push([el[0][i], el[1][i]])
+      res.push([el[0][i].replace(/ /g, ""), el[1][i]])
     }
     fs.writeFileSync('questions.json', JSON.stringify(res))
   })
