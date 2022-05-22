@@ -81,6 +81,7 @@ body {
   transition: .8;
   opacity: 0;
   color: #1b886d;
+  overflow-wrap: break-word;
 }
 
 .main p span {

@@ -75,6 +75,7 @@ body {
     transition: .8;
     opacity: 0;
     color: #1b886d;
+    overflow-wrap: break-word;
 
     span {
       opacity: 1;
