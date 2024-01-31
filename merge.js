@@ -14,3 +14,4 @@ const mergedData = {
 };
 
 fs.writeFileSync('new-questions.json', JSON.stringify(mergedData))
+
