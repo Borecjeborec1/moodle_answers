@@ -2,18 +2,17 @@
 * {
   padding: 0;
   margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
   width: 100vw;
   height: 100vh;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 body {
-  font-family: 'Akaya Telivigala', cursive;
+  font-family: "Akaya Telivigala", cursive;
   font-size: 16px;
   color: #cecece;
   width: 100vw;
@@ -33,145 +32,66 @@ body {
 }
 
 .animSolo {
-  -webkit-animation: anime 3s forwards;
-          animation: anime 3s forwards;
+  animation: anime 1s forwards;
 }
 
 .main {
   width: 80%;
   height: 90%;
-  -webkit-box-shadow: 0.1rem 0.1rem 2rem rgba(211, 211, 211, 0.5);
-          box-shadow: 0.1rem 0.1rem 2rem rgba(211, 211, 211, 0.5);
+  box-shadow: 0.1rem 0.1rem 2rem rgba(211, 211, 211, 0.5);
   position: relative;
   top: 5%;
   left: 10%;
   border-radius: 1rem;
   text-align: center;
   padding: 3rem;
-  min-height: -webkit-fit-content;
   min-height: -moz-fit-content;
   min-height: fit-content;
-  -webkit-transition: .8s;
-  transition: .8s;
+  transition: 0.8s;
   -webkit-backdrop-filter: blur(6px);
           backdrop-filter: blur(6px);
 }
-
 .main span {
   opacity: 0;
 }
-
 .main h1 {
   font-size: 5rem;
   text-transform: uppercase;
   margin-bottom: 1rem;
-  -webkit-transition: .8s;
-  transition: .8s;
+  transition: 0.8s;
   opacity: 0;
   color: #3cd5a7;
 }
-
-.main p {
+.main #result {
+  margin-top: 5%;
+  text-align: left;
+  opacity: 0;
+}
+.main #result p {
   font-size: 1.6rem;
   font-weight: bold;
-  margin-bottom: .3rem;
+  margin-bottom: 0.3rem;
   position: relative;
-  top: 25%;
-  -webkit-transition: .8;
-  transition: .8;
-  opacity: 0;
+  top: 5%;
+  transition: 0.8;
   color: #1b886d;
   overflow-wrap: break-word;
 }
-
-.main p span {
+.main #result p span {
   opacity: 1;
 }
-
 .main .nonPC {
-  margin: .5rem .1rem;
+  margin: 0.5rem 0.1rem;
   display: none;
 }
-
 .main .nonPC #question {
   font-size: 1.6rem;
   width: 90%;
 }
-
 .main .nonPC #find {
   font-size: 1.6rem;
   width: 90%;
-  margin-top: .5rem;
-}
-
-.selected {
-  -webkit-box-shadow: 1rem 1rem 5rem #1b1742;
-          box-shadow: 1rem 1rem 5rem #1b1742;
-  -webkit-transition: .8s;
-  transition: .8s;
-}
-
-.selected .waviy {
-  position: relative;
-  -webkit-box-reflect: below 0.2rem linear-gradient(transparent, rgba(0, 0, 0, 0.2));
-  font-size: 1.7rem;
-}
-
-.selected .waviy span {
-  position: relative;
-  display: inline-block;
-  -webkit-animation: waviy 2s infinite;
-          animation: waviy 2s infinite;
-  -webkit-animation-delay: calc(.1s * var(--i));
-          animation-delay: calc(.1s * var(--i));
-  color: #145746;
-}
-
-@-webkit-keyframes waviy {
-  0%,
-  40%,
-  100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  20% {
-    -webkit-transform: translateY(-20px);
-            transform: translateY(-20px);
-  }
-}
-
-@keyframes waviy {
-  0%,
-  40%,
-  100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  20% {
-    -webkit-transform: translateY(-20px);
-            transform: translateY(-20px);
-  }
-}
-
-@-webkit-keyframes anime {
-  0% {
-    width: 60px;
-    height: 60px;
-  }
-  25% {
-    width: 60px;
-    height: 60px;
-  }
-  50% {
-    width: 60px;
-    height: 70%;
-  }
-  100% {
-    width: 80%;
-    height: 90%;
-    -webkit-box-shadow: 0.1rem 0.1rem 2rem rgba(211, 211, 211, 0.5);
-            box-shadow: 0.1rem 0.1rem 2rem rgba(211, 211, 211, 0.5);
-  }
+  margin-top: 0.5rem;
 }
 
 @keyframes anime {
@@ -190,11 +110,9 @@ body {
   100% {
     width: 80%;
     height: 90%;
-    -webkit-box-shadow: 0.1rem 0.1rem 2rem rgba(211, 211, 211, 0.5);
-            box-shadow: 0.1rem 0.1rem 2rem rgba(211, 211, 211, 0.5);
+    box-shadow: 0.1rem 0.1rem 2rem rgba(211, 211, 211, 0.5);
   }
 }
-
 @media only screen and (max-width: 650px) {
   html {
     height: 100vh;
@@ -213,5 +131,4 @@ body {
     font-size: 1.2rem;
     top: 0%;
   }
-}
-/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */

@@ -35,7 +35,7 @@ body {
 }
 
 .animSolo {
-  animation: anime 3s forwards;
+  animation: anime 1s forwards;
 
 }
 
@@ -66,23 +66,26 @@ body {
     color: #3cd5a7;
   }
 
-  p {
-    font-size: 1.6rem;
-    font-weight: bold;
-    margin-bottom: .3rem;
-    position: relative;
-    top: 25%;
-    transition: .8;
+  
+  #result{
+    margin-top: 5%;
+    text-align: left;
     opacity: 0;
-    color: #1b886d;
-    overflow-wrap: break-word;
-
-    span {
-      opacity: 1;
+    p {
+      font-size: 1.6rem;
+      font-weight: bold;
+      margin-bottom: .3rem;
+      position: relative;
+      top: 5%;
+      transition: .8;
+      color: #1b886d;
+      overflow-wrap: break-word;
+      span {
+        opacity: 1;
+      }
+  
     }
-
   }
-
   .nonPC {
     margin: .5rem .1rem;
     display: none;
@@ -100,38 +103,6 @@ body {
   }
 }
 
-.selected {
-  box-shadow: 1rem 1rem 5rem #1b1742;
-  transition: .8s;
-
-  .waviy {
-    position: relative;
-    -webkit-box-reflect: below .2rem linear-gradient(transparent, rgba(0, 0, 0, .2));
-    font-size: 1.7rem;
-  }
-
-  .waviy span {
-    position: relative;
-    display: inline-block;
-    animation: waviy 2s infinite;
-    animation-delay: calc(.1s * var(--i));
-    color: #145746;
-
-  }
-
-  @keyframes waviy {
-
-    0%,
-    40%,
-    100% {
-      transform: translateY(0)
-    }
-
-    20% {
-      transform: translateY(-20px)
-    }
-  }
-}
 
 @keyframes anime {
   0% {
@@ -159,7 +130,7 @@ body {
 
 }
 
-@media only screen and(max-width: 650px) {
+@media only screen and (max-width: 650px) {
   html {
     height: 100vh;
     overflow: hidden;

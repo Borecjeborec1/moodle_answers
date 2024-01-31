@@ -9,7 +9,6 @@
   <title>Moodle Answers</title>
   <link rel="stylesheet" href="styles/styles.css">
   <script defer src="scripts/data.js"></script>
-  <script defer src="scripts/find.js"></script>
   <script defer src="scripts/script.js"></script>
 </head>
 
@@ -17,22 +16,23 @@
   <div id="bg"></div>
   <div class="main">
     <h1>Moodle Answers</h1>
-    <span>Supported subjects: Chemie, Fyzika, Env </span>
+    <span>Supported subjects: Chemistry, Physics (1.-4. year)</span>
 
     <form class="nonPC">
       <input type="text" id="question" placeholder="Question" autocomplete="off">
       <button id="find" type="submit">Find</button>
     </form>
-    <p class="waviy">
-      Click here and press CTRL+V to paste question.
-    </p>
+    <div id="result">
+      <h2>Question:</h4>
+      <p id="questionText">Paste (CTRL+V) the question to find the answer</p>
+      <br>
+      <br>
+      <h2>Answer:</h4>
+      <p id="answerText"></p>
+    </div>
     <span style="position: absolute;bottom: 1rem;right: 1rem;">
       &copy;Borecjeborec1
     </span>
-    <!-- <div class="input-group">
-      <input type="text" id="question" placeholder="Paste question here...">
-      <button id="find">Find</button>
-    </div> -->
 </body>
 
 </html>
