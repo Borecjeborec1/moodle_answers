@@ -15,13 +15,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Borecjeborec1/moodle_answers.git"
+    "url": "git+https://github.com/ROGR3/moodle_answers.git"
   },
-  "author": "borecjeborec1",
+  "author": "ROGR",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Borecjeborec1/moodle_answers/issues"
+    "url": "https://github.com/ROGR3/moodle_answers/issues"
   },
-  "homepage": "https://github.com/Borecjeborec1/moodle_answers#readme",
+  "homepage": "https://github.com/ROGR3/moodle_answers#readme",
   "description": ""
 }
